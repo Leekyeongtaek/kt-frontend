@@ -26,6 +26,14 @@ export enum StockType {
     CERTIFICATE_OF_CLASS_SHARE = 'CERTIFICATE_OF_CLASS_SHARE',
 }
 
+export interface StockSearchCondition {
+    keyword: string;
+    marketType: MarketType | 'ALL';
+    stockType: StockType | 'ALL';
+    department: Department | 'ALL';
+    securitiesType: SecuritiesType | 'ALL';
+}
+
 export interface StockResponse {
     id: number;
     standardCode: string;
