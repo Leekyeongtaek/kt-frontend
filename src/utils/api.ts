@@ -15,6 +15,8 @@ export const apiClient = async (endpoint: string, options?: RequestInit) => {
 
     const url = `${API_BASE_URL}${endpoint}`;
 
+    console.log("🔗 [API 요청] 통신 시도 중인 최종 URL:", url);
+
     // [await]: 비동기 작업(fetch)이 끝날 때까지 실행 컨텍스트 잠시 멈추고 대기 (Promise가 resolve 될 때까지 대기)
     const response = await fetch(url, {
 
